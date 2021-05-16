@@ -1,4 +1,3 @@
-
 import kivy
 
 # importing App class:
@@ -63,11 +62,9 @@ class Level_6_intro_page(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -87,18 +84,17 @@ class Level_6_intro_page(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=150)
-        texta = Label(text=f"""Mt.Lynaru, one of the tallest mountains in
-the realm. You had never been this
-close to it before. After taking a
-few moments to admire the view around,
-you snap out of it and remember why you
-are here.It’s time to get to Revan
+        texta = Label(text=f"""
+Mt.Lynaru, one of the tallest mountains 
+in the realm. You had never been this
+close to it before. After taking a few 
+moments to admire the view around, you 
+snap out of it and remember why you
+are here. It’s time to get to Revan.
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
-
-        self.add_widget(Label(text=f"""""", color=(0, 0, 0, 1)))
 
         choice = GridLayout(cols=1, rows=1)
         nextbutton = Button(text="Next")
@@ -153,18 +149,18 @@ class Level_6_Rito(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=150)
-        texta = Label(text=f"""You immediately fly to the top of
-the mountain.The feeling of wind on
-your wings brings back memories of 
-a time when you were safe. 
-You feel better and your resolve is stronger.
+        texta = Label(text=f"""
+You immediately fly to the top 
+of the mountain.The feeling of 
+wind on your wings brings back 
+memories of a time when you 
+were safe. You feel better and 
+your resolve is stronger.
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
         h.hp += 150
-        self.add_widget(Label(text=f"""""", color=(0, 0, 0, 1)))
-
         choice = GridLayout(cols=1, rows=1)
         nextbutton = Button(text="Next")
         nextbutton.bind(on_press=self.proceed_1)
@@ -216,21 +212,25 @@ class Level_6_climb(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=150)
-        texta = Label(text=f""" It’s a long, hard climb.But that
-will not stop you, for you are
-filled with determination.
-You begin your journey up the
-great mountain. Good thing you
-already had some mountain climbing
-experience from the war, so it did
+        texta = Label(text=f""" 
+It’s a long, hard climb. But 
+that will not stop you, for 
+you are filled with 
+determination. You begin your 
+journey up the great mountain. 
+Good thing you already had some 
+mountain climbing experience 
+from the war, so it did
 not prove too challenging.
-A few hours later, while you were 
-resting in a small cave, you noticed 
-a rather odd shape on a cliffside near
-you.You decide to investigate it.As you 
-got closer you see that it is a small 
-rock-cut statue with a few stone bowls 
-near it.\n""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
+
+A few hours later, while you 
+were resting in a small cave, 
+you noticed a rather odd shape 
+on a cliffside near you. You 
+decide to investigate it. As you 
+got closer you see that it is a 
+small rock-cut statue with a few 
+stone bowls near it.\n""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
@@ -268,7 +268,7 @@ class Level_6_yes(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=4, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
         back_button = Button(text="Back")
@@ -296,24 +296,26 @@ class Level_6_yes(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=150)
-        texta = Label(text=f"""Nothing happens at first.You aren’t
-surprised and begin to leave,when you
-notice the shrine begins to glow.
-It’s dim initially, but it’s intensity
-increases.You touch the statue and find
-it’s warm.You start feeling stronger and your
-injuries begin healing.After a while it stops
-and everything goes back to normal.
-Was it a blessing?You’re not sure.All you 
-know is that you feel a lot better.
-With your rejuvenated confidence,you 
-proceed up the mountain.
+        texta = Label(text=f"""
+Nothing happens at first. You 
+aren’t surprised and begin to 
+leave, when you notice the 
+shrine begins to glow. It’s dim 
+initially, but it’s intensity
+increases. You touch the statue 
+and find it’s warm. You start 
+feeling stronger and your
+injuries begin healing. 
+After a while it stops and 
+everything goes back to normal.
+Was it a blessing? You’re not sure.
+All you know is that you feel a lot 
+better. With your rejuvenated 
+confidence,you proceed up the mountain.
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
-
-        self.add_widget(Label(text=f"""""", color=(0, 0, 0, 1)))
 
         choice = GridLayout(cols=1, rows=1)
         nextbutton = Button(text="Next")
@@ -337,7 +339,7 @@ class Level_6_no(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=4, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
         back_button = Button(text="Back")
@@ -375,8 +377,6 @@ you know your journey will end soon.
         scroll.add_widget(frame)
         self.add_widget(scroll)
 
-        self.add_widget(Label(text=f"""""", color=(0, 0, 0, 1)))
-
         choice = GridLayout(cols=1, rows=1)
         nextbutton = Button(text="Next")
         nextbutton.bind(on_press=self.proceed_1)
@@ -399,12 +399,9 @@ class Level_7_intro_page(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=4, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
-
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -425,12 +422,13 @@ class Level_7_intro_page(character, BoxLayout):
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
         texta = Label(text=f""" 
-You arrive at Revan’s camp. It’s pretty 
-impressive he was able to set it
-all up in just a few days. After
-scouting from a rock above the camp
-you find a path that leads to Revan’s tent.
-As you’re leaving you find a bottle with
+You arrive at Revan’s camp. It’s 
+pretty impressive he was able to 
+set it all up in just a few days. 
+After scouting from a rock above 
+the camp you find a path that 
+leads to Revan’s tent. As you’re 
+leaving you find a bottle with
 something in it.
 \n""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
@@ -495,9 +493,12 @@ class Level_7_yes_drink(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
-        texta = Label(text=f"""It tastes like one of the skill
-enhancement potions handed out during the war.
-It’s not very effective but it still helps.
+        texta = Label(text=f"""
+It tastes like one of the skill
+enhancement potions handed out 
+during the war.
+It’s not very effective but it 
+still helps.
 \n""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
@@ -569,7 +570,7 @@ class Level_7_no_drink(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
-        texta = Label(text=f"""\n""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
+        texta = Label(text=f""" """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
@@ -611,12 +612,9 @@ class Level_7_attack(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
-
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -636,16 +634,22 @@ class Level_7_attack(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
-        texta = Label(text=f"""You drop down on a guard below, neutralizing him.
-This attracts the attention of the entire 
-camp, but you don’t care. You’re here for 
-Revan, and nothing is going to stop you.
-An unmatched fury takes over you as you take 
-out the entire camp in combat.Seeing your rage
-and strength terrorizes your enemies, moments
-before they fall to your {h.weapon}. When the 
-dust settles, you stand victorious on a pile
-of mercenary corpses. But there’s no sign of Revan.
+        texta = Label(text=f"""
+You drop down on a guard below, 
+neutralizing him. This attracts 
+the attention of the entire 
+camp, but you don’t care. 
+You’re here for Revan, and 
+nothing is going to stop you.
+An unmatched fury takes over 
+you as you take out the entire 
+camp in combat. Seeing your rage
+and strength terrorizes your 
+enemies, moments before they 
+fall to your {h.weapon}. When the 
+dust settles, you stand victorious 
+on a pile of mercenary corpses. 
+But there’s no sign of Revan.
 You head to his tent to investigate.
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
@@ -653,8 +657,6 @@ You head to his tent to investigate.
         self.add_widget(scroll)
         if h.strength <= 600:
             h.hp -= 200
-        self.add_widget(Label(text=f"""""", color=(0, 0, 0, 1)))
-
         choice = GridLayout(cols=1, rows=1)
         nextbutton = Button(text="Next")
         nextbutton.bind(on_press=self.proceed_1)
@@ -678,12 +680,9 @@ class Level_7_attack_no(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
-
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -703,12 +702,15 @@ class Level_7_attack_no(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
-        texta = Label(text=f"""You drop down on a guard below,
-neutralizing him.This attracts the attention of
-the entire camp,and soon you find yourself facing
-an overwhelming force. You put up a good fight but
-the numbers are not in your favour, and you soon
-perish
+        texta = Label(text=f"""
+You drop down on a guard below,
+neutralizing him. This attracts 
+the attention of the entire camp,
+and soon you find yourself facing
+an overwhelming force. You put up 
+a good fight but the numbers are 
+not in your favour, and you soon
+perish. 
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
@@ -729,12 +731,9 @@ class Level_7_sneak(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
-
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -754,20 +753,20 @@ class Level_7_sneak(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
-        texta = Label(text=f"""You drop down into the camp, hiding
-in bushes and under carts as you 
-make your way through the camp.
-You take out archers in watchtowers
-and guards blocking your way.Finally
-you enter Revan’s tent, but find it
-to be empty
+        texta = Label(text=f"""
+You drop down into the camp, 
+hiding in bushes and under 
+carts as you make your way 
+through the camp. You take 
+out archers in watchtowers
+and guards blocking your 
+way. Finally you enter 
+Revan’s tent, but find it
+to be empty.
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
-
-        self.add_widget(Label(text=f"""""", color=(0, 0, 0, 1)))
-
         choice = GridLayout(cols=1, rows=1)
         nextbutton = Button(text="Next")
         nextbutton.bind(on_press=self.proceed_1)
@@ -791,12 +790,9 @@ class Level_7_sneak_no(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
-
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -816,15 +812,18 @@ class Level_7_sneak_no(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
-        texta = Label(text=f"""You drop down into the camp, hiding
-in bushes and under carts as you
-make your way through the camp.
-An archer from a watchtower spots
-you and alerts everyone, and soon
-you find yourself facing an overwhelming
-force. You put up a good fight but
-the numbers are not in your favour,and
-you soon perish
+        texta = Label(text=f"""
+You drop down into the camp, 
+hiding in bushes and under 
+carts as you make your way 
+through the camp. An archer 
+from a watchtower spots you 
+and alerts everyone, and soon
+you find yourself facing an 
+overwhelming force. You put up 
+a good fight but the numbers 
+are not in your favour, and
+you soon perish.
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
@@ -845,12 +844,9 @@ class Level_7_courtyard(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
-
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -870,20 +866,26 @@ class Level_7_courtyard(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
-        texta = Label(text=f"""You find yourself in an empty courtyard.
-‘REVAN!SHOW YOURSELF’
+        texta = Label(text=f"""
+You find yourself in an empty 
+courtyard.
+
+"REVAN!SHOW YOURSELF!"
+
 On the hill in front of you,
 a silhouette of a man appears,
 before being replaced by a man
-resembling a monster
-‘So this is the bug that has 
-been bothering me all along. I’m 
-impressed you made it all the way 
-here bug, but you have been a thorn 
-in my side for far too long. Let’s 
-get this over with, It’s almost 
-lunchtime. I think I’ll have 
-{h.race} today’
+resembling a monster,
+"So this is the bug that has 
+been bothering me all along. 
+I’m impressed you made it all 
+the way here bug, but you have 
+been a thorn in my side for far 
+too long. Let’s get this over 
+with, It’s almost lunchtime. 
+I think I’ll have 
+{h.race} today."
+
 He jumps down and faces you in the
 courtyard. Everything you have done
 has led to this moment…
@@ -931,12 +933,9 @@ class Level_7_attack_0(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
-
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -1023,12 +1022,9 @@ class Level_7_attack_1(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
-
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -1114,12 +1110,9 @@ class Level_7_defend_0(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
-
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -1163,14 +1156,11 @@ screams in pain
         if h.artifact == True:
             game.lvl7artifactattack()
             game.screenmanager.current = "Level 7 artifact attack"
-            pass
         else:
             if h.hp > 0:
                 game.screenmanager.current = "Level 7 attack 0"
-                pass
             else:
                 game.screenmanager.current = "Level 7 death"
-                pass
 
     def defend(self, instance):
         if h.hp > 0:
@@ -1206,12 +1196,9 @@ class Level_7_defend_1(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
-
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -1231,10 +1218,13 @@ class Level_7_defend_1(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
-        texta = Label(text=f"""Revan, now in pain, fires a fireball.
-Luckily your parrying skills are unmatched,so 
-you are able to shoot it back at him.Revan was
-not expecting you to match his skill
+        texta = Label(text=f"""
+Revan, now in pain, fires a 
+fireball. Luckily your parrying 
+skills are unmatched, so you 
+are able to shoot it back at 
+him. Revan was not expecting 
+you to match his skill.
 \n""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
@@ -1295,12 +1285,9 @@ class Level_7_death(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
-
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -1320,13 +1307,18 @@ class Level_7_death(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
-        texta = Label(text=f"""As you ready yourself and look for
-an opportunity to strike, Revan blinds you.
-In a state of disorientation, he uses a wind
-blast and pushes you off the mountain.
-All you can do is scream as you fall to
-your death. You came so close to being a
-hero, but you could not succeed.
+        texta = Label(text=f"""
+As you ready yourself and look 
+for an opportunity to strike, 
+Revan blinds you. In a state 
+of disorientation, he uses a 
+wind blast and pushes you off 
+the mountain. All you can do 
+is scream as you fall to your 
+death. You came so close to 
+being a hero, but you could 
+not succeed.
+
 Rest now and be at peace.
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
@@ -1348,12 +1340,9 @@ class Level_7_defend_2(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
-
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -1373,9 +1362,11 @@ class Level_7_defend_2(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
-        texta = Label(text=f"""You are stronger than Revan anticipated.
-He throws a volley of knives at
-you, but you manage to sidestep
+        texta = Label(text=f"""
+You are stronger than Revan 
+anticipated. He throws a 
+volley of knives at you, 
+but you manage to sidestep
 and hit him from the side!
 \n""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
@@ -1442,12 +1433,9 @@ class Level_7_defend_3(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
-
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -1467,11 +1455,15 @@ class Level_7_defend_3(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
-        texta = Label(text=f"""Your furious opponent shouts in a language
-long forgotten, transforming into a wolf to
-attack you.After he lunges on you, you manage
-to throw him off and hit him with an arrow,
-destroying his wolf form
+        texta = Label(text=f"""
+Your furious opponent shouts 
+in a language long forgotten, 
+transforming into a wolf to 
+attack you. After he lunges 
+on you, you manage to throw 
+him off and hit him with an 
+arrow, destroying his wolf 
+form.
 \n""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
@@ -1532,12 +1524,9 @@ class Level_7_defend_4(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
-
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -1557,19 +1546,26 @@ class Level_7_defend_4(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
-        texta = Label(text=f"""‘Ho-How are you still alive!!!’Shouts Revan 
-as he draws his sword. You can
-see him bleeding profusely,it’s 
-a miracle he is still standing.
-After getting into a rather shabby form,
-he attempts to strike you, but you knock
-the sword out of his hand and cut him
-down with ease.Revan has been defeated
-You fall on your knees, your foes defeated.
-All the pain,screams and nightmares can now 
-be put to rest knowing Revan’s evil will 
-never hurt anyone.
-Your journey ends here hero.The future is for you to decide.
+        texta = Label(text=f"""
+"Ho-How are you still alive!!!"
+Shouts Revan as he draws his 
+sword. You can see him bleeding 
+profusely, it’s a miracle he is 
+still standing. After getting 
+into a rather shabby form, he 
+attempts to strike you, but you 
+knock the sword out of his hand 
+and cut him down with ease. Revan 
+has been defeated.
+
+You fall on your knees, your foes 
+defeated. All the pain,screams and 
+nightmares can now be put to rest 
+knowing Revan’s evil will never 
+hurt anyone.
+
+Your journey ends here hero.
+The future is for you to decide.
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
@@ -1590,12 +1586,9 @@ class Level_7_artifact_attack(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
-
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -1615,24 +1608,33 @@ class Level_7_artifact_attack(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=150)
-        texta = Label(text=f"""You charge at Revan with your {h.weapon},
-but before you can strike a blinding
-flash knocks out both of you. 
-When you come to your senses, you see
-Revan on the ground,motionless.You approach
-him cautiously, but you soon realise he is
-dead. Next to him are shards of what appears
-to be sapphire.After close examination,
-you realise it’s the same sapphire you found
+        texta = Label(text=f"""
+You charge at Revan with your 
+{h.weapon}, but before you can 
+strike a blinding flash knocks 
+out both of you. When you come 
+to your senses, you see Revan 
+on the ground,motionless. You 
+approach him cautiously, but 
+you soon realise he is dead. 
+Next to him are shards of what 
+appears to be sapphire. After 
+close examination, you realise 
+it’s the same sapphire you found
 in the camp all those days ago.
-It all makes sense, this is why Hera herself was guarding it.
-It must have some special enchantments,
-Which is why Hera asked you to take it to Revan.
-You fall on your knees, your foes defeated.
-All the pain,screams and nightmares can now
-be put to rest knowing Revan’s evil will never
-hurt anyone.
-Your journey ends here hero.The future is for you to decide.
+It all makes sense, this is why 
+Hera herself was guarding it.
+It must have some special 
+enchantments, Which is why Hera 
+asked you to take it to Revan. 
+You fall on your knees, your 
+foes defeated. All the pain, 
+screams and nightmares can now
+be put to rest knowing Revan’s 
+evil will never hurt anyone.
+
+Your journey ends here hero.
+The future is for you to decide.
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
@@ -1655,11 +1657,9 @@ class Level_5_solo(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -1681,39 +1681,37 @@ class Level_5_solo(character, BoxLayout):
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None), scroll_y=(1),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=150)
         texta = Label(text=f"""
-You leap through a window, and start
-to scale down the wall. You move 
-quickly, but not quick enough. The 
-mercenaries start to close in. So 
-you climb into the closest window. 
-You quickly lock and barricade the 
-door just as men rush inside through 
-the window. You swiftly attack with 
-your {h.weapon} and put them to rest. 
-A couple more try to enter, but the 
-bodies have piled up by the window. 
-They can't enter. You use this 
-opportunity to baricade the window 
-even more. Suddenly a deafening thud 
-comes from the door of the room. 
-They must be using a battering ram 
-to break down the room.
-You move aside and let them enter 
-and attack them mercilessly one by 
-one. You see a wizard and he casts a 
-spell towards you.
+You leap through a window, and 
+start to scale down the wall. 
+You move quickly, but not quick 
+enough. The mercenaries start to 
+close in. So you climb into the 
+closest window. You quickly lock 
+and barricade the door just as men 
+rush inside through the window. 
+You swiftly attack with your 
+{h.weapon} and put them to rest. 
+A couple more try to enter, but 
+the bodies have piled up by the 
+window. They can't enter. You use 
+this opportunity to baricade the 
+window even more. Suddenly a 
+deafening thud comes from the door 
+of the room. They must be using a 
+battering ram to break down the 
+room. You move aside and let them 
+enter and attack them mercilessly 
+one by one. You see a wizard and 
+he casts a spell towards you.
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
         h.hp *= 0.9
-        self.add_widget(Label(text=f""" """, color=(0, 0, 0, 1)))
 
-        choice = GridLayout(cols=2, rows=1)
-        sNeakbutton = Label(text=" ")
+        choice = GridLayout(cols=1, rows=1)
         fIghtbutton = Button(text="MOVE ON")
         fIghtbutton.bind(on_press=self.FIGHT)
-        choice.add_widget(sNeakbutton)
         choice.add_widget(fIghtbutton)
         self.add_widget(choice)
 
@@ -1768,38 +1766,38 @@ class Level_5_solo_human(character, BoxLayout):
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=150)
         texta = Label(text=f"""
-The wizard tries but he misses
-Once you spot him you make your
-way to him swiftly dodging his 
-attacks. When you come within 
-3 ft, you lunge and grab the wand
-out of his hand. But because he 
-holds on tighter than expected 
-and the wand breaks. A huge energy 
-blast is created which knocks you 
-off your feet. You are thrown to 
-a wall and you see all your enemies 
-being just as thrown or 
-disintegrating. The wizard himself was 
-burnt to bits. You look around to see 
-the fort starting to crumble. Hell, 
-the blast destroyed the fort's walls 
-and pillars. It's going to crumble soon. 
-You need to get out of here. Looking at
-the damage you might have fifteen to 
-twenty minutes at least.
+The wizard tries but he 
+misses. Once you spot him 
+you make your way to him 
+swiftly dodging his attacks. 
+When you come within 3 ft, 
+you lunge and grab the wand
+out of his hand. But because 
+he holds on tighter than 
+expected and the wand breaks. 
+A huge energy blast is created 
+which knocks you off your feet. 
+You are thrown to a wall and 
+you see all your enemies being 
+just as thrown or disintegrating. 
+The wizard himself was burnt to 
+bits. You look around to see 
+the fort starting to crumble. 
+Hell, the blast destroyed the 
+fort's walls and pillars. It's 
+going to crumble soon. You need 
+to get out of here. Looking at
+the damage you might have 
+fifteen to twenty minutes at 
+least.
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
 
-        self.add_widget(Label(text=f"""    """, color=(0, 0, 0, 1)))
-
-        choice = GridLayout(cols=2, rows=1)
-        rationalbutton = Label(text=" ")
+        choice = GridLayout(cols=1, rows=1)
         aggressivebutton = Button(text="Next")
         aggressivebutton.bind(on_press=self.aggressive)
-        choice.add_widget(rationalbutton)
         choice.add_widget(aggressivebutton)
         self.add_widget(choice)
 
@@ -1854,40 +1852,40 @@ class Level_5_solo_not_human(character, BoxLayout):
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=150)
         texta = Label(text=f"""
-The wizard hits you and slows you 
-down for a minute. This is not 
-good. Once you spot him you make 
-your way to him swiftly dodging his 
-attacks. When you come within 
-3 ft, you lunge and grab the wand
-out of his hand. But because he 
-holds on tighter than expected 
-and the wand breaks. A huge energy 
-blast is created which knocks you 
-off your feet. You are thrown to 
-a wall and you see all your enemies 
-being just as thrown or 
-disintegrating. The wizard himself was 
-burnt to bits. You look around to see 
-the fort starting to crumble. Hell, 
-the blast destroyed the fort's walls 
-and pillars. It's going to crumble soon. 
-You need to get out of here. Looking at
-the damage you might have fifteen to 
-twenty minutes at least.
+The wizard hits you and slows 
+you down for a minute. This is 
+not good. Once you spot him 
+you make your way to him 
+swiftly dodging his attacks. 
+When you come within 3 ft, 
+you lunge and grab the wand
+out of his hand. But because 
+he holds on tighter than 
+expected and the wand breaks. 
+A huge energy blast is created 
+which knocks you off your feet. 
+You are thrown to a wall and 
+you see all your enemies being 
+just as thrown or disintegrating. 
+The wizard himself was burnt to 
+bits. You look around to see the 
+fort starting to crumble. Hell, 
+the blast destroyed the fort's 
+walls and pillars. It's going to 
+crumble soon. You need to get out 
+of here. Looking at the damage you 
+might have fifteen to twenty 
+minutes at least.
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
         h.hp -= 50
         h.strength -= 50
-        self.add_widget(Label(text=f"""    """, color=(0, 0, 0, 1)))
 
-        choice = GridLayout(cols=2, rows=1)
-        rationalbutton = Label(text=" ")
+        choice = GridLayout(cols=1, rows=1)
         aggressivebutton = Button(text="Next")
         aggressivebutton.bind(on_press=self.aggressive)
-        choice.add_widget(rationalbutton)
         choice.add_widget(aggressivebutton)
         self.add_widget(choice)
 
@@ -1942,30 +1940,42 @@ class Level_5_fort_escape(character, BoxLayout):
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=150)
         texta = Label(text=f"""
-You rush through room after room
-looking for a way out. In one room,
-you find Hera's desk littered with 
-papers. You find on there a floor 
-plan of the fort. You grab the floor 
-plan and rush to the gardens, the 
-closest area not under a roof. You 
-reach the gardens as one of the further
-wings crumble. According to the floor 
-plan that was the oldest wing and was 
-under heavy reconstruction. Now in open 
-space, you refer the map again. There's 
-a secret pathway near the inner courtyard 
-which leads to Mount Lynaru. As you start 
-to walk toward there Hera comes up behind 
-you. She looks badly damaged, it seems the 
+You rush through room after 
+room looking for a way out. 
+In one room, you find Hera's 
+desk littered with papers. 
+You find on there a floor 
+plan of the fort. You grab 
+the floor plan and rush to 
+the gardens, the closest 
+area not under a roof. You 
+reach the gardens as one of 
+the further wings crumble. 
+According to the floor plan 
+that was the oldest wing and 
+was under heavy reconstruction. 
+Now in open space, you refer 
+the map again. There's a 
+secret pathway near the inner 
+courtyard which leads to 
+Mount Lynaru. As you start 
+to walk toward there Hera 
+comes up behind you. She looks 
+badly damaged, it seems the 
 shockwave impacted her as well. 
-"You! How dare you destroy my fort? 
-I am Hera commander-in-cheif of--"
-"Yeah I know all that, can you please skip 
-to the part where you tell me something 
-I don't know already?"
-"AARGHH, I'm gonna kill you. I challenge 
-you to a duel right here right now."
+
+"You! How dare you destroy my 
+fort? I am Hera commander-in-cheif 
+of--"
+
+"Yeah I know all that, can you 
+please skip to the part where 
+you tell me something I don't
+know already?"
+
+"AARGHH, I'm gonna kill you. 
+I challenge you to a duel right 
+here right now."
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
@@ -2033,31 +2043,26 @@ class Level_5_Duel_Decline(character, BoxLayout):
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
         texta = Label(text=f"""
-"Yeah, I'm gonna pass." You say 
-and move on to the courtyard. 
-However when you're back is turned, 
-Hera fires an arrow at you, 
-aiming for your head. What you 
-didn't know was that Hera is one the 
-best archers that money can buy. She 
-can shoot arrows at pretty far distances, 
-quite accurately. Her throw finds its 
-aim and hits you on the back of the 
+"Yeah, I'm gonna pass." You 
+say and move on to the 
+courtyard. However when you're 
+back is turned, Hera fires an 
+arrow at you, aiming for your 
+head. What you didn't know was 
+that Hera is one the best 
+archers that money can buy. She 
+can shoot arrows at pretty far 
+distances, quite accurately. 
+Her throw finds its aim and 
+hits you on the back of the 
 head, killing you instantly. 
-            
+
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
 
         self.add_widget(Label(text=f""" GAME OVER """, color=(0, 0, 0, 1)))
-
-        choice = GridLayout(cols=2, rows=1)
-        rationalbutton = Label(text=" ")
-        aggressivebutton = Label(text=" ")
-        choice.add_widget(rationalbutton)
-        choice.add_widget(aggressivebutton)
-        self.add_widget(choice)
 
 
 class Level_5_Duel_Accept(character, BoxLayout):
@@ -2103,38 +2108,43 @@ class Level_5_Duel_Accept(character, BoxLayout):
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
         texta = Label(text=f"""
-"Alright, let's finish this," you say
-as you draw your {h.weapon}. Hera draws 
-her weapon. It is an intricately carved 
-long bow. You try and guess the amount 
-of arrows she might have. There's 30 m
-between you and her, even an amateur 
-can shoot straight within 3 - 5 tries. 
-She draws and releases an arrow with
-lightning speed, and it barely misses 
-you. If you don't move, she'll kill you 
-in the next attempt. You start to run in
-a zig - zag manner toward her. Using the 
-trees in the garden as cover. Whiile you 
-take cover you hear a crash, when you look 
-back you see that the building behind Hera 
-crumbled, and see her body crushed under 
-the debris. This was convienient. You move on
-to the courtyard. Thanks to the map you find
-secret passage way easily without much difficulty
-You are on your way now to Mount Lynaru.  
+"Alright, let's finish this," 
+you say as you draw your 
+{h.weapon}. Hera draws her 
+weapon. It is an intricately 
+carved long bow. You try and 
+guess the amount of arrows 
+she might have. There's 30 m
+between you and her, even an 
+amateur can shoot straight 
+within 3 - 5 tries. 
+
+She draws and releases an arrow 
+with lightning speed, and it 
+barely misses you. If you don't 
+move, she'll kill you in the next 
+attempt. You start to run in a 
+zig - zag manner toward her. Using 
+the trees in the garden as cover. 
+While you take cover you hear a 
+crash, when you look back you see 
+that the building behind Hera 
+crumbled, and see her body crushed 
+under the debris. This was 
+convienient. You move on to the 
+courtyard. Thanks to the map you 
+find secret passage way easily 
+without much difficulty. 
+You are on your way now to 
+Mount Lynaru.  
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
 
-        self.add_widget(Label(text=f"""  """, color=(0, 0, 0, 1)))
-
-        choice = GridLayout(cols=2, rows=1)
-        rationalbutton = Label(text=" ")
+        choice = GridLayout(cols=1, rows=1)
         aggressivebutton = Button(text="NEXT")
         aggressivebutton.bind(on_press=self.aggressive)
-        choice.add_widget(rationalbutton)
         choice.add_widget(aggressivebutton)
         self.add_widget(choice)
 
@@ -2185,37 +2195,44 @@ class Level_5_fort_escape_damage(character, BoxLayout):
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=150)
         texta = Label(text=f"""
-You try to move a little bit, but
-find that you've broken some of 
-your bones. Your ribs hurt, you're
-sore in the back, and your shoulder 
-is dislocated. But you can't stay 
-here any longer. You rush through 
-room after room looking for a way 
-out. In one room, you find Hera's 
-desk littered with papers. You find 
-on there a floor plan of the fort.
-You grab the floor plan and rush to 
-the gardens, the closest area not 
-under a roof. You reach the gardens 
-as one of the further wings crumble. 
-According to the floor plan that was 
-the oldest wing and was under heavy 
-reconstruction. Now in open space, 
-you refer the map again. There's a 
-secret pathway near the inner 
-courtyard which leads to Mount Lynaru. 
-As you start to walk toward there Hera 
-comes up behind of you. She looks badly 
-damaged, it seems the shockwave impacted
+You try to move a little bit, 
+but find that you've broken 
+some of your bones. Your ribs 
+hurt, you're sore in the back, 
+and your shoulder is dislocated. 
+But you can't stay here any 
+longer. You rush through room 
+after room looking for a way out. 
+In one room, you find Hera's 
+desk littered with papers. You 
+find on there a floor plan of 
+the fort. You grab the floor plan 
+and rush to the gardens, the 
+closest area not under a roof. 
+You reach the gardens as one of 
+the further wings crumble. 
+According to the floor plan that 
+was the oldest wing and was under 
+heavy reconstruction. Now in open 
+space, you refer the map again. 
+There's a secret pathway near the 
+inner courtyard which leads to 
+Mount Lynaru. As you start to walk 
+toward there Hera comes up behind 
+of you. She looks badly damaged, 
+it seems the shockwave impacted
 her as well. 
+
 "You! How dare you destroy my fort? 
 I am Hera commander-in-cheif of--"
-"Yeah I know all that, can you please skip 
-to the part where you tell me something 
-I don't know already?"
-"AARGHH, I'm gonna kill you. I challenge 
-you to a duel right here right now."
+
+"Yeah I know all that, can you please 
+skip to the part where you tell me 
+something I don't know already?"
+
+"AARGHH, I'm gonna kill you. I 
+challenge you to a duel right 
+here right now."
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
@@ -2254,11 +2271,9 @@ class Level_5_solo_Game_over(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text="")
-        grid.add_widget(back_button)
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -2280,33 +2295,32 @@ class Level_5_solo_Game_over(character, BoxLayout):
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
         texta = Label(text=f"""
-You try and fight all of them, but 
-ALAS it is of no use. The enemies are 
-too many and your strength too little.
-More mercenaries enter from behind Hera, 
-while she looks on at them killing you 
-with a sadistic smile. They cut deep into 
-you, they stab you front, back and center. 
-You somehow make your way to Hera and stab 
-her in the stomach hard enough to kill her.
-Now you fall to the ground ready for death, 
-but not ready to die. You eventually fall 
-into the eternal sleep, with your warrior
-spirit still fighting. 
-      
+You try and fight all of them, 
+but ALAS it is of no use. The 
+enemies are too many and your 
+strength too little. More 
+mercenaries enter from behind 
+Hera, while she looks on at 
+them killing you with a 
+sadistic smile. They cut deep 
+into you, they stab you front, 
+back and center. 
+
+You somehow make your way to 
+Hera and stab her in the 
+stomach hard enough to kill her.
+Now you fall to the ground ready 
+for death, but not ready to die. 
+You eventually fall into the 
+eternal sleep, with your 
+warrior spirit still fighting. 
+
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
 
         self.add_widget(Label(text=f""" GAME OVER """, color=(0, 0, 0, 1)))
-
-        choice = GridLayout(cols=2, rows=1)
-        rationalbutton = Label(text=" ")
-        aggressivebutton = Label(text=" ")
-        choice.add_widget(rationalbutton)
-        choice.add_widget(aggressivebutton)
-        self.add_widget(choice)
 
 
 class Level_5_group_Game_over(character, BoxLayout):
@@ -2321,11 +2335,9 @@ class Level_5_group_Game_over(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text="")
-        grid.add_widget(back_button)
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -2380,7 +2392,7 @@ Alas, you cannot. As soon as Caldor leaves
 a mercenary throws a grenade into the room. 
 It explodes killing you and everyone in 
 the room, instantaneously.
-    
+
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
@@ -2388,12 +2400,6 @@ the room, instantaneously.
 
         self.add_widget(Label(text=f""" GAME OVER """, color=(0, 0, 0, 1)))
 
-        choice = GridLayout(cols=2, rows=1)
-        rationalbutton = Label(text=" ")
-        aggressivebutton = Label(text=" ")
-        choice.add_widget(rationalbutton)
-        choice.add_widget(aggressivebutton)
-        self.add_widget(choice)
 
 
 class Level_5_group_inside(character, BoxLayout):
@@ -2410,11 +2416,9 @@ class Level_5_group_inside(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -2483,17 +2487,14 @@ The soldiers quickly surround you
         scroll.add_widget(frame)
         self.add_widget(scroll)
         h.hp *= 0.9
-        self.add_widget(Label(text=f""" """, color=(0, 0, 0, 1)))
         if h.strength > 500.00 and h.charisma == True:
             h.hp *= 0.9
         else:
             h.hp *= 0.75
         h.strength *= 0.9
-        choice = GridLayout(cols=2, rows=1)
-        sNeakbutton = Label(text=" ")
+        choice = GridLayout(cols=1, rows=1)
         fIghtbutton = Button(text="MOVE ON")
         fIghtbutton.bind(on_press=self.FIGHT)
-        choice.add_widget(sNeakbutton)
         choice.add_widget(fIghtbutton)
         self.add_widget(choice)
 
@@ -2573,13 +2574,10 @@ You reach the warlock and …
         scroll.add_widget(frame)
         self.add_widget(scroll)
         h.hp *= 0.9
-        self.add_widget(Label(text=f""" """, color=(0, 0, 0, 1)))
 
-        choice = GridLayout(cols=2, rows=1)
-        sNeakbutton = Label(text=" ")
+        choice = GridLayout(cols=1, rows=1)
         fIghtbutton = Button(text="MOVE ON")
         fIghtbutton.bind(on_press=self.FIGHT)
-        choice.add_widget(sNeakbutton)
         choice.add_widget(fIghtbutton)
         self.add_widget(choice)
 
@@ -2681,13 +2679,10 @@ Revan needs to pay for what he did...
         h.hp *= 0.75
         h.strength *= 0.75
         h.stealth *= 0.75
-        self.add_widget(Label(text=f""" """, color=(0, 0, 0, 1)))
 
-        choice = GridLayout(cols=2, rows=1)
-        sNeakbutton = Label(text=" ")
+        choice = GridLayout(cols=1, rows=1)
         fIghtbutton = Button(text="MOVE ON")
         fIghtbutton.bind(on_press=self.FIGHT)
-        choice.add_widget(sNeakbutton)
         choice.add_widget(fIghtbutton)
         self.add_widget(choice)
 
@@ -2779,13 +2774,10 @@ Revan needs to pay for what he did...
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
-        self.add_widget(Label(text=f""" """, color=(0, 0, 0, 1)))
 
-        choice = GridLayout(cols=2, rows=1)
-        sNeakbutton = Label(text=" ")
+        choice = GridLayout(cols=1, rows=1)
         fIghtbutton = Button(text="MOVE ON")
         fIghtbutton.bind(on_press=self.FIGHT)
-        choice.add_widget(sNeakbutton)
         choice.add_widget(fIghtbutton)
         self.add_widget(choice)
 
@@ -2805,11 +2797,9 @@ class Level_4_intro_page(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=4, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -3029,8 +3019,6 @@ done anything alone.
         scroll.add_widget(frame)
         self.add_widget(scroll)
 
-        self.add_widget(Label(text=f"""""", color=(0, 0, 0, 1)))
-
         choice = GridLayout(cols=1, rows=1)
         nextbutton = Button(text="Next")
         nextbutton.bind(on_press=self.proceed_1)
@@ -3083,16 +3071,19 @@ class Level_4_help(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
-        texta = Label(text=f"""“I guess you are right, just like
-the old days eh”
-“That’s my boy!Now quickly, follow us to
-our room, we have a plan you might be interested
-in hearing. Oh and drink this, for luck.
+        texta = Label(text=f"""
+“I guess you are right, just 
+like the old days, eh.”
+
+“That’s my boy! Now quickly, 
+follow us to our room, we have 
+a plan you might be interested
+in hearing. Oh and drink this, 
+for luck."
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
-        self.add_widget(Label(text=f""""""))
         h.stealth += 50
         print(h.stealth)
         choice = GridLayout(cols=1, rows=1)
@@ -3145,7 +3136,7 @@ class Level_4_fort_attack(character, BoxLayout):
         frame = GridLayout(cols=1, rows=1, size_hint_y=None)
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
-                            size=(Window.width, Window.height * (1 / 3)),scroll_distance=150)
+                            size=(Window.width, Window.height * (1 / 3)), scroll_distance=150)
         texta = Label(text=f"""As you get closer to the fort
 you start seeing less of the mercenaries.
 You survey the location and find what seems
@@ -3171,8 +3162,6 @@ rappelling down the walls.
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
-
-        self.add_widget(Label(text=f"""""", color=(0, 0, 0, 1)))
 
         choice = GridLayout(cols=1, rows=1)
         nextbutton = Button(text="Next")
@@ -3228,41 +3217,61 @@ class Level_4_safehouse(character, BoxLayout):
         frame = GridLayout(cols=1, rows=1, size_hint_y=None)
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
-                            size=(Window.width, Window.height * (1 / 3)),scroll_distance=100)
-        texta = Label(text=f"""They take you to an underground room.
-After fumbling around with the keys,Deruvur
-manages to open the door.
-‘What is this place?’ You ask
-‘This is our safehouse, make yourself comfortable’
-You walk around the room and find everyone’s gear
-stacked in a corner. They were still as unorganized
-as they were during the war.
-Caldor tapped your shoulder,’Mind joining us, we’ll
-show you the plan’
-‘We suspect Revan and Hera are in town, 
-specifically in the fort. Lucky for us their 
-guards don’t have a very strong sense of loyalty. 
-We bribed one of them and he’ll be here soon with 
-the fort schematics and Revan’s location. I’d 
-suggest get some sleep till he arrives”
-A few hours later you hear a knock on the door.
-Caldor gets up and says ‘What is the music of life?’
-‘Silence my friend’ says the man on the door
-Caldor opens the door,’Took you long enough,do you have 
-the information?’
-‘Yes’ says Anor,the spy. ‘But you won’t like it.Revan has
-emptied the fort and is moving everyone to a base in Mt.Lynaru.
-He wants to lay low for a while there. Here are the orders
-he sent everyone. He left Hera in charge here’
-‘Good job Anor,here’s your payment’,says Deruvur as he hands
-him a pouch of gold.
-Something feels off though.
+                            size=(Window.width, Window.height * (1 / 3)), scroll_distance=175)
+        texta = Label(text=f"""
+They take you to an underground 
+room. After fumbling around with 
+the keys, Deruvur manages to open 
+the door.
+
+"What is this place?" You ask.
+
+"This is our safehouse, make 
+yourself comfortable."
+
+You walk around the room and find 
+everyone’s gear stacked in a corner. 
+They were still as unorganized as 
+they were during the war.
+
+Caldor tapped your shoulder,"Mind 
+joining us, we’ll show you the plan."
+
+"We suspect Revan and Hera are in 
+town, specifically in the fort. 
+Lucky for us their guards don’t 
+have a very strong sense of loyalty. 
+We bribed one of them and he’ll be 
+here soon with the fort schematics 
+and Revan’s location. I’d suggest 
+get some sleep till he arrives.”
+
+A few hours later you hear a knock 
+on the door.
+
+Caldor gets up and says, "What is the 
+music of life?"
+
+"Silence my friend," says the man on 
+the door. Caldor opens the door,
+"Took you long enough,do you have 
+the information?"
+
+"Yes," says Anor,the spy. "But you 
+won’t like it. Revan has emptied the 
+fort and is moving everyone to a base 
+in Mt.Lynaru. He wants to lay low for 
+a while there. Here are the orders he
+sent everyone. He left Hera in charge 
+here."
+
+"Good job Anor, here’s your payment,"
+says Deruvur as he hands him a pouch 
+of gold. Something feels off though.
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
-
-        self.add_widget(Label(text=f"""""", color=(0, 0, 0, 1)))
 
         choice = GridLayout(cols=1, rows=1)
         nextbutton = Button(text="Next")
@@ -3319,18 +3328,26 @@ class Level_4_No_Dwarf(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
-        texta = Label(text=f"""Anor quickly leaves. A few minutes later
-you notice something stuck under the table.
-You gather everyone around.It looks like a bomb
-‘Anor!Should have expected he’d betray us too.
-What do we do about this’
-Suddenly you hear footsteps approaching the 
-safehouse,and metal clanking.
-‘Soldiers.He sold us out!Only way out is through
-the door and they know it’ says Caldor 
-‘Then let's not keep them waiting’ you say as you 
-grab your {h.weapon}.You barge out the door together 
-and see yourself surrounded by the mercenaries.
+        texta = Label(text=f"""
+Anor quickly leaves. A few minutes 
+later you notice something stuck 
+under the table. You gather everyone 
+around.It looks like a bomb.
+
+"Anor!Should have expected he’d 
+betray us too. What do we do about this?"
+
+Suddenly you hear footsteps approaching 
+the safehouse,and metal clanking.
+
+"Soldiers. He sold us out! Only way out 
+is through the door and they know it," 
+says Caldor 
+
+"Then let's not keep them waiting," you 
+say as you grab your {h.weapon}. You barge 
+out the door together and see yourself 
+surrounded by the mercenaries.
 \n""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
@@ -3401,36 +3418,42 @@ class Level_4_disappear(character, BoxLayout):
         frame = GridLayout(cols=1, rows=1, size_hint_y=None)
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
-                            size=(Window.width, Window.height * (1 / 3)),scroll_distance=100)
-        texta = Label(text=f"""Deruvur fires an arrow and tells you
-all to duck. It explodes and creates
-a blinding light,disorienting the
-soldiers for a few seconds.You quickly
-use all your smoke bombs to cover your
-team’s escape as you cut through them.
-You manage to get out,but the soldiers 
-are chasing you. The entire town is on 
-high alert,and the city gates are 
-closed.
-‘{h.name}, head for the sewers.Use them 
-to get out of the city, we’ll stay here 
-and cover keep them busy’
-‘I’m not leaving you guys!’
-‘No time to argue!This is our only shot at
-getting to Revan’,with that,Caldor pushes 
-you down the manhole. It’s a rough fall but
-you can hear the fighting above.There is 
-nothing you can do for them now.
-After a few hours in horrible stench you make
-it out of the sewers and emerge outside the
-city. In the distance you see Mt.Lynaru.
-Revan will pay,this time it’s personal.
+                            size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
+        texta = Label(text=f"""
+Deruvur fires an arrow and tells 
+you all to duck. It explodes and 
+creates a blinding light, 
+disorienting the soldiers for a 
+few seconds. You quickly use all 
+your smoke bombs to cover your
+team’s escape as you cut through 
+them. You manage to get out, but the 
+soldiers are chasing you. The entire 
+town is on high alert, and the city 
+gates are closed.
+
+"{h.name}, head for the sewers. Use 
+them to get out of the city, we’ll 
+stay here and cover keep them busy."
+
+"I’m not leaving you guys!"
+
+"No time to argue! This is our only 
+shot at getting to Revan," with that,
+Caldor pushes you down the manhole. 
+It’s a rough fall but you can hear 
+the fighting above. There is nothing 
+you can do for them now. After a few 
+hours in horrible stench you make
+it out of the sewers and emerge outside 
+the city. In the distance you see 
+Mt.Lynaru.
+
+Revan will pay, this time it’s personal.
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
-
-        self.add_widget(Label(text=f"""""", color=(0, 0, 0, 1)))
 
         choice = GridLayout(cols=1, rows=1)
         nextbutton = Button(text="Next")
@@ -3484,24 +3507,31 @@ class Level_4_no_disappear(character, BoxLayout):
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
                             size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
-        texta = Label(text=f"""Deruvur fires an arrow and tells you
-all to duck. It explodes and creates a
-blinding light,disorienting the soldiers
-for a few seconds.You quickly use all your
-smoke bombs to cover your team’s escape 
-as you cut through them. You manage to get
-out,but the soldiers are chasing you.
-The entire town is on high alert,and the city
-gates are closed.
-‘Well that was worth a short’
-The soldiers quickly surround you
-‘Just like the old days guys’ says Caldor
+        texta = Label(text=f"""
+Deruvur fires an arrow and tells
+you all to duck. It explodes and 
+creates a blinding light, 
+disorienting the soldiers for a 
+few seconds. You quickly use all 
+your smoke bombs to cover your 
+team’s escape as you cut through 
+them. You manage to get out, but 
+the soldiers are chasing you.
+
+The entire town is on high alert,
+and the city gates are closed.
+
+"Well that was worth a short."
+
+The soldiers quickly surround 
+you.
+
+"Just like the old days guys," 
+says Caldor
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
-
-        self.add_widget(Label(text=f"""""", color=(0, 0, 0, 1)))
 
         choice = GridLayout(cols=1, rows=1)
         nextbutton = Button(text="Next")
@@ -3553,22 +3583,38 @@ class Level_4_Dwarf(character, BoxLayout):
         frame = GridLayout(cols=1, rows=1, size_hint_y=None)
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
-                            size=(Window.width, Window.height * (1 / 3)),scroll_distance=100)
-        texta = Label(text=f"""Anor quickly leaves. A few minutes later
-you notice something stuck under the table.
-You gather everyone around.It looks like a 
-bomb
-‘Anor!Should have expected he’d betray us too.
-What do we do about this’
-Suddenly you hear footsteps approaching the 
-safehouse,and metal clanking.
-‘Soldiers.He sold us out!Only way out is through
-the door and they know it’ says Caldor
-‘Actually,no’ says Deruvur as he slides a cabinet.
-‘This is a secret passageway that leads to the old
-underground tunnels.It’s small but we can easily fit.’
-‘Why didn’t you tell us about this before?’
-‘You never asked’
+                            size=(Window.width, Window.height * (1 / 3)), scroll_distance=100)
+        texta = Label(text=f"""
+Anor quickly leaves. A few minutes 
+later you notice something stuck 
+under the table. You gather 
+everyone around. It looks like a
+bomb.
+
+"Anor! Should have expected he’d 
+betray us too. What do we do about 
+this?"
+
+Suddenly you hear footsteps 
+approaching the safehouse, and 
+metal clanking.
+
+"Soldiers. He sold us out! Only 
+way out is through the door and 
+they know it," says Caldor
+
+"Actually, no," says Deruvur as
+he slides a cabinet.
+
+"This is a secret passageway 
+that leads to the old underground 
+tunnels. It’s small but we can 
+easily fit."
+
+"Why didn’t you tell us about 
+this before?"
+
+"You never asked."
 \n""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
@@ -3638,35 +3684,50 @@ class Level_4_Dwarf_escape(character, BoxLayout):
         frame = GridLayout(cols=1, rows=1, size_hint_y=None)
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
-                            size=(Window.width, Window.height * (1 / 3)),scroll_distance=150)
-        texta = Label(text=f"""The team quickly enters the passageway.
-Before long, the bomb goes off and 
-the walls of the safehouse collapse,
-blocking the passageway entrance.
-Only way out is ahead.
-After a few hours in the dark passageway 
-and tunnels you emerge outside the city.
-‘What do we do now’? You ask
-‘We came here for Hera, i’m not leaving till
-she’s dead’
-‘That’s your fight.I’m heading for the mountain,
-for Revan’
-‘Don’t be foolish {h.name}’ shouts Caldor
-‘You didn't see what he did to Dragontail Walk!
-I was there.All the screams,the lives lost,hell I
-should have died there too! Revan needs to answer.
-I don’t care if I die up there, I owe it to myself
-to try.’
-‘In that case,good luck.Remember you can always return here.
-You know how to find us’
-‘I do,I’ll see you guys soon’
-You set out alone,Lynaru in the distance.
+                            size=(Window.width, Window.height * (1 / 3)), scroll_distance=175)
+        texta = Label(text=f"""
+The team quickly enters the 
+passageway. Before long, the bomb 
+goes off and the walls of the 
+safehouse collapse, blocking the
+passageway entrance. Only way out 
+is ahead.
+
+After a few hours in the dark 
+passageway and tunnels you emerge
+outside the city.
+
+"What do we do now?" You ask
+
+"We came here for Hera, I’m not 
+leaving till she’s dead."
+
+"That’s your fight. I’m heading 
+for the mountain, for Revan."
+
+"Don’t be foolish {h.name}," shouts 
+Caldor.
+
+"You didn't see what he did to 
+Dragontail Walk! I was there. All 
+the screams, the lives lost, hell 
+I should have died there too! Revan 
+needs to answer. I don’t care if I 
+die up there, I owe it to myself 
+to try."
+
+"In that case,good luck.Remember 
+you can always return here.
+You know how to find us."
+
+"I do,I’ll see you guys soon."
+
+You set out alone, Lynaru in the 
+distance.
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
-
-        self.add_widget(Label(text=f"""""", color=(0, 0, 0, 1)))
 
         choice = GridLayout(cols=1, rows=1)
         nextbutton = Button(text="Next")
@@ -3691,11 +3752,9 @@ class Level_3_intro_page(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        back_button = Label(text=" ")
-        grid.add_widget(back_button)
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -3714,20 +3773,22 @@ class Level_3_intro_page(character, BoxLayout):
         frame = GridLayout(cols=1, rows=1, size_hint_y=None)
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
-                            size=(Window.width, Window.height * (1 / 3)),scroll_distance=150)
-        texta = Label(text=f"""You arrive at Tiefling village, exhausted
-from spending days on the road. You
-decide the best place to start the
-investigation would be the village
-tavern. After getting a much needed
-drink, you start asking around about
-Feca.When you ask the man behind the
+                            size=(Window.width, Window.height * (1 / 3)), scroll_distance=150)
+        texta = Label(text=f"""
+You arrive at Tiefling village, 
+exhausted from spending days on 
+the road. You decide the best 
+place to start the investigation 
+would be the village tavern. After 
+getting a much needed drink, you 
+start asking around about Feca. 
+When you ask the man behind the
 counter, he points towards the half 
 naked bearded man outside the bar.
-’That’s him right there’.You had heard
-stories of him being a drunk loudmouth,
-but actually seeing him like that was rather
-hilarious.\n""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
+’That’s him right there’.You had 
+heard stories of him being a drunk 
+loudmouth, but actually seeing him 
+like that was rather hilarious.\n""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
@@ -3800,53 +3861,75 @@ class Level_3_friendly_charisma(character, BoxLayout):
         frame = GridLayout(cols=1, rows=1, size_hint_y=None)
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
-                            size=(Window.width, Window.height * (1 / 3)),scroll_distance=150)
+                            size=(Window.width, Window.height * (1 / 3)), scroll_distance=150)
         texta = Label(text=f"""
 You walk up to him, he immediately
 shouts “Th-There’s my drinking 
-buddy! What say you buy me another 
-round to old times eh pal”.
-He must be rather desperate if he
-made you, a complete stranger is 
-buddy.
-“Sure Feca, lets go get you a drink”.
-You get two pints of mead and slowly 
-watch him get drunk. For a rather tiny 
-man he sure could hold his drink. You 
-were worried you’d run out of cash 
-before you got anything out of him. Then, 
-he suddenly says,’Say what,you look 
-trustworthy. Ya wanna share some secrets,
-I’ll go first. Ya know that inn that was 
-raided a few days ago, I supplied them
-with the weapons. It was a proper massacre 
-I hear, all thanks to my weapons. Their 
-Ruthorham weapons looked like toys in 
-front of my creations I tell ya!’
-“So they were from Ruthorham?” you ask
-“Where else would they be from, it’s where 
-their dumb kind lurks all the time! Hey now, 
-it’s your turn.Tell me a secret!”
-“Ah-well that’s easy, I’m gay Feca”
-“You’re WHAT! Ge-Get out of my sight.You and 
-your kind are truly the scum of the Earth, 
-worse than them Ruthorham folks yeah!”
-“Oh well, as you say Feca,nice meeting you”
+buddy! What say you buy me 
+another round to old times 
+eh pal."
+
+He must be rather desperate if
+he made you, a complete stranger 
+his buddy.
+
+“Sure Feca, lets go get you a 
+drink."
+
+You get two pints of mead and 
+slowly watch him get drunk. 
+For a rather tiny man he sure 
+could hold his drink. You were 
+worried you’d run out of cash 
+before you got anything out of 
+him. 
+
+Then, he suddenly says,
+"Say what,you look trustworthy. 
+Ya wanna share some secrets,
+I’ll go first. Ya know that 
+inn that was raided a few days 
+ago, I supplied them with the 
+weapons. It was a proper massacre 
+I hear, all thanks to my weapons. 
+Their Ruthorham weapons looked 
+like toys in front of my creations 
+I tell ya!’
+
+“So they were from Ruthorham?” you 
+ask.
+
+“Where else would they be from, 
+it’s where their dumb kind lurks 
+all the time! Hey now, it’s your turn. 
+Tell me a secret!”
+
+“Ah-well that’s easy, I’m gay Feca.”
+
+“You’re WHAT! Ge-Get out of my sight.
+You and your kind are truly the scum 
+of the Earth, worse than them Ruthorham 
+folks yeah!”
+
+“Oh well, as you say Feca, nice meeting 
+you.”
+
 “Don’t talk to me!”
-So the rumors of him being bigoted were true 
-too. Doesn't matter though, he told you exactly 
-where to go. After resting a little more you set 
-out for Ruthorham the next morning\n""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
+
+So the rumors of him being bigoted were 
+true too. Doesn't matter though, he told 
+you exactly where to go. After resting a 
+little more you set out for Ruthorham 
+the next morning\n""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
 
         self.add_widget(Label(text=f"""Proceed to Ruthorham?""", color=(0, 0, 0, 1)))
 
-        choice = GridLayout(cols=2, rows=1)
+        choice = GridLayout(cols=1, rows=1)
         continuebutton = Button(text="Continue")
         continuebutton.bind(on_press=self.proceed)
-        choice.add_widget(Label(text=" "))
         choice.add_widget(continuebutton)
         self.add_widget(choice)
 
@@ -3893,53 +3976,78 @@ class Level_3_aggressive_yes(character, BoxLayout):
         frame = GridLayout(cols=1, rows=1, size_hint_y=None)
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
-                            size=(Window.width, Window.height * (1 / 3)),scroll_distance=150)
-        texta = Label(text=f"""You walk up to him and grab
-him by the neck 
+                            size=(Window.width, Window.height * (1 / 3)), scroll_distance=200)
+        texta = Label(text=f"""
+You walk up to him and grab
+him by the neck.
+
 “H-Hey let go of me!!”
+
 “Guards!Guards!!”
-You quickly punch him in the face
-to silence him.You drag him to the
-back of the inn and tie him to the
-stable doors.
-“Now Feca, These past few days have
-been rather unpleasant for me, no
-thanks to you.So don’t make me ask 
-you twice.Who bought the weapons for 
-the mercenaries that attacked the inn
-on Dragontail Walk!”
-“I-I don’t know what you’re talking
-about!! Me swears!”
-You punch him in the stomach and draw 
-your {h.weapon}
-“Do your worst! If I talk Hera will have 
-my head!”
-“If you don’t, Hera won’t get the chance to”
+
+You quickly punch him in the 
+face to silence him.You drag 
+him to the back of the inn 
+and tie him to the stable 
+doors.
+
+“Now Feca, These past few days 
+have been rather unpleasant for 
+me, no thanks to you. So don’t 
+make me ask you twice. Who bought 
+the weapons for the mercenaries 
+that attacked the inn on 
+Dragontail Walk!”
+
+“I-I don’t know what you’re 
+talking about!! Me swears!”
+
+You punch him in the stomach 
+and draw your {h.weapon}.
+
+“Do your worst! If I talk Hera 
+will have my head!”
+
+“If you don’t, Hera won’t get 
+the chance to”
+
 “Go to hell!”
-This was taking too much time, you take out 
-your knife and stab him in the gut. He 
-screams and twitches.
-” All right All right!! It was a group from 
-Ruthorham. They warned me not to talk, now 
-make this stop!!”
-“See, that was easy, now hold still”
+
+This was taking too much time, 
+you take out your knife and 
+stab him in the gut. He screams 
+and twitches.
+
+”All right All right!! It was a 
+group from Ruthorham. They warned 
+me not to talk, now make this
+stop!!”
+
+“See, that was easy, now hold 
+still.”
+
 You bandage him up and release him.
-“This never happened Feca, are we clear?”
+
+“This never happened Feca, are we 
+clear?”
+
 “Y-Yes”
+
 “Good”
-With that out of the way, you now knew exactly where to go.
-After resting a little more you set out for Ruthorham the 
-next morning\n""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
+
+With that out of the way, you now 
+knew exactly where to go. After 
+resting a little more you set out 
+for Ruthorham the next morning\n""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
 
         self.add_widget(Label(text=f"""Proceed to Ruthorham?""", color=(0, 0, 0, 1)))
 
-        choice = GridLayout(cols=2, rows=1)
+        choice = GridLayout(cols=1, rows=1)
         continuebutton = Button(text="Continue")
         continuebutton.bind(on_press=self.proceed)
-        choice.add_widget(Label(text=" "))
         choice.add_widget(continuebutton)
         self.add_widget(choice)
 
@@ -3986,59 +4094,80 @@ class Level_3_aggressive_no(character, BoxLayout):
         frame = GridLayout(cols=1, rows=1, size_hint_y=None)
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
-                            size=(Window.width, Window.height * (1 / 3)),scroll_distance=150)
-        texta = Label(text=f"""You walk up to him and grab
+                            size=(Window.width, Window.height * (1 / 3)), scroll_distance=200)
+        texta = Label(text=f"""
+You walk up to him and grab
 him by the neck
-“H-Hey let go of me!!” “Guards!Guards!!”
-You quickly punch him in the face
-to silence him.You drag him to the 
-back of the inn and tie him to the
-stable doors.
-“Now Feca, These past few days have
-been rather unpleasant for me, no thanks
-to you.So don’t make me ask you twice.Who
-bought the weapons for the mercenaries that
-attacked the inn on Dragontail Walk!”
-“I-I don’t know what you’re talking about!! Me swears!”
-You punch him in the stomach and draw your {h.weapon}
-“Do your worst! If I talk Hera will have my head!”
-“If you don’t, Hera won’t get the chance to”
+“H-Hey let go of me!!” 
+“Guards!Guards!!”
+You quickly punch him in the 
+face to silence him. You drag 
+him to the back of the inn and 
+tie him to the stable doors.
+
+“Now Feca, These past few days 
+have been rather unpleasant for 
+me, no thanks to you. So don’t 
+make me ask you twice.Who bought 
+the weapons for the mercenaries 
+that attacked the inn on 
+Dragontail Walk!”
+
+“I-I don’t know what you’re 
+talking about!! Me swears!”
+
+You punch him in the stomach and 
+draw your {h.weapon}.
+
+“Do your worst! If I talk Hera will 
+have my head!”
+
+“If you don’t, Hera won’t get the 
+chance to.”
+
 “Go to hell!”
-This was taking too much time, you take out your
-knife and stab him in the gut. He screams and twitches.
-He goes limp,his breathing is faint.You realise
-you messed up.After releasing him you rush to the
-village doctor and tell him Feca was stabbed in a
-bar fight.The doctor says he’s unconscious
-but may survive 
-You blew it, now he won’t tell you anything
-even if he survives. There must be some other
-way to find out more about the attack. You head
-to his shop and notice the lights are out, maybe
-no one’s inside?You manage to break in through 
-the back window.It’s pitch black, though you 
-manage to light a lamp and look around. You 
-find a fancy trunk with a huge padlock on
-it. Using your {h.weapon} you break it and find
-it’s full of gold from Ruthorham .That must mean 
-his “clients” must be from Ruthorham, and that’s 
-where you must go next. As you’re leaving you 
-accidentally trip the lamp,and it lands directly
-on his mead collection. The fire spreads quickly
-and you manage to get out of there. Guards and
-villagers alike quickly surround the burning
-building.
-“Stop right there {h.race}! Explain Yourself!""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
+
+This was taking too much time, you 
+take out your knife and stab him in 
+the gut. He screams and twitches.
+He goes limp,his breathing is faint.
+You realise you messed up. After 
+releasing him you rush to the
+village doctor and tell him Feca 
+was stabbed in a bar fight. The doctor 
+says he’s unconscious but may survive 
+You blew it, now he won’t tell you 
+anything even if he survives. There 
+must be some other way to find out 
+more about the attack. You head to 
+his shop and notice the lights are 
+out, maybe no one’s inside? You 
+manage to break in through the back 
+window.It’s pitch black, though you 
+manage to light a lamp and look 
+around. You find a fancy trunk with a 
+huge padlock on it. Using your {h.weapon} 
+you break it and find it’s full of gold 
+from Ruthorham. That must mean his 
+“clients” must be from Ruthorham, and 
+that’s where you must go next. As you’re 
+leaving you accidentally trip the lamp, 
+and it lands directly on his mead 
+collection. The fire spreads quickly and 
+you manage to get out of there. Guards
+and villagers alike quickly surround 
+the burning building.
+
+“Stop right there {h.race}! 
+Explain Yourself!"
+""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
 
-        self.add_widget(Label(text=f""" """, color=(0, 0, 0, 1)))
-
-        choice = GridLayout(cols=2, rows=1)
+        choice = GridLayout(cols=1, rows=1)
         nextbutton = Button(text="Next")
         nextbutton.bind(on_press=self.proceed_1)
-        choice.add_widget(Label(text=" "))
         choice.add_widget(nextbutton)
         self.add_widget(choice)
 
@@ -4085,7 +4214,7 @@ class Level_3_friendly_no_charisma(character, BoxLayout):
         frame = GridLayout(cols=1, rows=1, size_hint_y=None)
         frame.bind(minimum_height=frame.setter('height'))
         scroll = ScrollView(do_scroll_x=False, do_scroll_y=True, size_hint=(1, None),
-                            size=(Window.width, Window.height * (1 / 3)),scroll_distance=150)
+                            size=(Window.width, Window.height * (1 / 3)), scroll_distance=150)
         texta = Label(text=f"""
 You walk up to him, he 
 immediately shouts 
@@ -4117,30 +4246,29 @@ anything. There must be some other
 way to find out more about the 
 attack.You head to his shop and 
 notice the lights are out, maybe 
-no one’s inside?You manage to break
-in through the back window. It’s pitch 
-black, though you manage to light a lamp 
-and look around. You find a fancy trunk 
-with a huge padlock on it. Using your 
-{h.weapon} you break it and find it’s 
-full of gold from Ruthorham. That must 
-mean his “clients” must be from Ruthorham, 
+no one’s inside?You manage to 
+break in through the back window. 
+It’s pitch black, though you manage 
+to light a lamp and look around. 
+You find a fancy trunk with a huge 
+padlock on it. Using your {h.weapon} 
+you break it and find it’s full of 
+gold from Ruthorham. That must mean 
+his “clients” must be from Ruthorham, 
 and that’s where you must go next.
-As you’re leaving you accidentally trip 
-the lamp,and it lands directly on his 
-mead collection. The fire spreads
-quickly and you manage to get out 
-of there. Guards and villagers alike 
-quickly surround the burning building.
-“Stop right there {h.race}! 
+As you’re leaving you accidentally 
+trip the lamp,and it lands directly
+on his mead collection. The fire 
+spreads quickly and you manage to get 
+out of there. Guards and villagers 
+alike quickly surround the burning 
+building. “Stop right there {h.race}! 
 Explain Yourself!""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
 
-        self.add_widget(Label(text=f""" """, color=(0, 0, 0, 1)))
-
-        choice = GridLayout(cols=2, rows=1)
+        choice = GridLayout(cols=1, rows=1)
         nextbutton = Button(text="Next")
         nextbutton.bind(on_press=self.proceed_1)
         choice.add_widget(nextbutton)
@@ -4493,10 +4621,9 @@ class Level_2_final_no(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        grid.add_widget(Label(text=" "))
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -4527,7 +4654,7 @@ You never found out why they were out
 to kill you. You slowly give in to the 
 Eternal Slumber, 
 the warrior spirit still fighting...
-            
+
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
@@ -4536,12 +4663,6 @@ the warrior spirit still fighting...
         h.strength += 50
         h.stealth += 50
         self.add_widget(Label(text=f"""GAME OVER""", color=(0, 0, 0, 1), font_size=20))
-        choice = GridLayout(cols=2, rows=1)
-        sNeakbutton = Label(text="")
-        fIghtbutton = Label(text="")
-        choice.add_widget(sNeakbutton)
-        choice.add_widget(fIghtbutton)
-        self.add_widget(choice)
 
 
 class Level_2_final_yes_d(character, BoxLayout):
@@ -4616,13 +4737,10 @@ There are some things he has to answer for...
         frame.add_widget(texta)
         scroll.add_widget(frame)
         self.add_widget(scroll)
-        self.add_widget(Label(text=f"""Move to the next slide""", color=(0, 0, 0, 1)))
 
-        choice = GridLayout(cols=2, rows=1)
-        sNeakbutton = Label(text=" ")
+        choice = GridLayout(cols=1, rows=1)
         fIghtbutton = Button(text="Next")
         fIghtbutton.bind(on_press=self.FIGHT)
-        choice.add_widget(sNeakbutton)
         choice.add_widget(fIghtbutton)
         self.add_widget(choice)
 
@@ -4706,13 +4824,10 @@ There are some things he has to answer for...
         h.hp -= 100
         h.strength += 50
         h.stealth += 50
-        self.add_widget(Label(text=f"""Move to the next slide""", color=(0, 0, 0, 1)))
 
-        choice = GridLayout(cols=2, rows=1)
-        sNeakbutton = Label(text=" ")
+        choice = GridLayout(cols=1, rows=1)
         fIghtbutton = Button(text="Next")
         fIghtbutton.bind(on_press=self.FIGHT)
-        choice.add_widget(sNeakbutton)
         choice.add_widget(fIghtbutton)
         self.add_widget(choice)
 
@@ -4778,11 +4893,9 @@ There are some things he must answer for...
               h.weapon, h.artifact)
         self.add_widget(Label(text=f"""Move Onto the next screen""", color=(0, 0, 0, 1)))
 
-        choice = GridLayout(cols=2, rows=1)
-        sNeakbutton = Label(text="")
+        choice = GridLayout(cols=1, rows=1)
         fIghtbutton = Button(text="MOVE ON")
         fIghtbutton.bind(on_press=self.FIGHT)
-        choice.add_widget(sNeakbutton)
         choice.add_widget(fIghtbutton)
         self.add_widget(choice)
 
@@ -4985,11 +5098,9 @@ and the gold.""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400)
         self.add_widget(Label(text=f"""You go to the armory and
 pick up the saphire and the gold.""", color=(0, 0, 0, 1)))
 
-        choice = GridLayout(cols=2, rows=1)
-        sNeakbutton = Label(text=" ")
+        choice = GridLayout(cols=1, rows=1)
         fIghtbutton = Button(text="Next")
         fIghtbutton.bind(on_press=self.FIGHT)
-        choice.add_widget(sNeakbutton)
         choice.add_widget(fIghtbutton)
         self.add_widget(choice)
 
@@ -5097,11 +5208,9 @@ and the gold.""", color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400)
         self.add_widget(Label(text=f"""You go to the armory and
 pick up the saphire and the gold.""", color=(0, 0, 0, 1)))
 
-        choice = GridLayout(cols=2, rows=1)
-        sNeakbutton = Label(text=" ")
+        choice = GridLayout(cols=1, rows=1)
         fIghtbutton = Button(text="Next")
         fIghtbutton.bind(on_press=self.FIGHT)
-        choice.add_widget(sNeakbutton)
         choice.add_widget(fIghtbutton)
         self.add_widget(choice)
 
@@ -5355,7 +5464,7 @@ You never were able to take revenge
 for what happened at the inn.
 You slowly give in to the Eternal Slumber, 
 the warrior spirit still fighting...
-           
+
 """, color=(0, 0, 0, 1), size_hint=(1, None), pos=(self.width, 400))
         frame.add_widget(texta)
         scroll.add_widget(frame)
@@ -5364,12 +5473,6 @@ the warrior spirit still fighting...
         h.strength += 50
         h.stealth += 50
         self.add_widget(Label(text=f"""GAME OVER""", color=(0, 0, 0, 1), font_size=20))
-        choice = GridLayout(cols=2, rows=1)
-        sNeakbutton = Label(text="")
-        fIghtbutton = Label(text="")
-        choice.add_widget(sNeakbutton)
-        choice.add_widget(fIghtbutton)
-        self.add_widget(choice)
 
 
 class Level_2_Fight_1_NORM(character, BoxLayout):
@@ -5451,12 +5554,9 @@ There are some things he must answer for...
         h.artifact = True
         print(h.race, h.hp, h.stealth, h.strength, h.charisma, h.home, h.name,
               h.weapon, h.artifact)
-        self.add_widget(Label(text=f"""Move Onto the next screen""", color=(0, 0, 0, 1)))
-        choice = GridLayout(cols=2, rows=1)
-        sNeakbutton = Label(text="")
+        choice = GridLayout(cols=1, rows=1)
         fIghtbutton = Button(text="MOVE ON")
         fIghtbutton.bind(on_press=self.FIGHT)
-        choice.add_widget(sNeakbutton)
         choice.add_widget(fIghtbutton)
         self.add_widget(choice)
 
@@ -5546,11 +5646,9 @@ There are some things he must answer for...
               h.weapon, h.artifact)
         self.add_widget(Label(text=f"""Move Onto the next screen""", color=(0, 0, 0, 1)))
 
-        choice = GridLayout(cols=2, rows=1)
-        sNeakbutton = Label(text="")
+        choice = GridLayout(cols=1, rows=1)
         fIghtbutton = Button(text="MOVE ON")
         fIghtbutton.bind(on_press=self.FIGHT)
-        choice.add_widget(sNeakbutton)
         choice.add_widget(fIghtbutton)
         self.add_widget(choice)
 
@@ -5572,10 +5670,9 @@ class Level_2_INTRO(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=2, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        grid.add_widget(Label(text=" "))
         grid.add_widget(homescreen_button)
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
@@ -5873,7 +5970,7 @@ class Level_1_inn_fight_sces(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=4, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
         back_button = Button(text="Back")
@@ -6076,7 +6173,7 @@ class Level_1_inn_sneak_sces(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=4, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
         back_button = Button(text="Back")
@@ -6173,7 +6270,7 @@ class Level_1_1_fight(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=4, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
         back_button = Button(text="Back")
@@ -6266,7 +6363,7 @@ class Level_1_1_rjump(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=4, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
         back_button = Button(text="Back")
@@ -6364,10 +6461,9 @@ class Level_1_1_ejump(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=4, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
-        stop_music_button = Button(text="Stop Music")
         back_button = Button(text="Back")
         grid.add_widget(back_button)
         back_button.bind(on_press=self.back)
@@ -6375,14 +6471,7 @@ class Level_1_1_ejump(character, BoxLayout):
         homescreen_button.bind(on_press=self.Homescreen)
         grid.add_widget(music_button)
         music_button.bind(on_press=self.music)
-        grid.add_widget(stop_music_button)
-        stop_music_button.bind(on_press=self.stop_music)
         self.add_widget(grid)
-
-    def stop_music(self, instance):
-        sound = SoundLoader.load(
-            'extra files for mini project\VIKING music -Epic Action Background Music No Copyright.wav')
-        sound.stop()
 
     def music(self, instance):
         sound = SoundLoader.load(
@@ -6472,7 +6561,7 @@ class Level_1_1_hjump(character, BoxLayout):
         self.bottom_bar()
 
     def bottom_bar(self):
-        grid = GridLayout(cols=4, rows=1, padding=5, spacing=10)
+        grid = GridLayout(cols=3, rows=1, padding=5, spacing=10)
         homescreen_button = Button(text="Home")
         music_button = Button(text="Music")
         stop_music_button = Button(text="Stop Music")
@@ -6675,7 +6764,6 @@ fight your way out of this nightmare?""", color=(0, 0, 0, 1)))
 class User_input_page(character, BoxLayout):
     _disabled_count = 0
     global h
-    n = "name"
 
     def __init__(self, race, hp, stealth, strength, charisma, home, name, weapon, artifact, defense, **kwargs):
         character.__init__(self, race, hp, stealth, strength, charisma, home, name, weapon, artifact, defense)
@@ -7062,7 +7150,7 @@ class Home_page(BoxLayout):
         self.homescreen()
 
     def homescreen(self):
-        titledisplay = Label(text=f"""Dragon Tale Quest""", color=(0, 0, 0, 1), font_size=32)
+        titledisplay = Label(text=f"""Dragontail Quest""", color=(0, 0, 0, 1), font_size=32)
         self.add_widget(titledisplay)
         subtitledisplay = Label(text=f"""A Choose your Own adventure Story""", color=(0, 0, 0, 1), font_size=20)
         pic = Image(source='extra files for mini project\homescreen image.png')
